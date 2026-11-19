@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 public interface ContactoEstudianteRepository extends JpaRepository<ContactoEstudiante, Long> {
-    @Query("select c from ContactoEstudiante c where c.estudiante.id = :estudianteId")
-    Optional<ContactoEstudiante> buscarPorEstudiante(@Param("estudianteId") Long estudianteId);
+  @Query("select c from ContactoEstudiante c where c.estudiante.id = :estudianteId")
+  Optional<ContactoEstudiante> buscarPorEstudiante(@Param("estudianteId") Long estudianteId);
 }
